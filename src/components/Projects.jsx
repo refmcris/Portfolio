@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import uninventoryImage from "../assets/Uninventory.jpg";
-import viaticosImage from "../assets/viaticos.jpg";
+import viaticosImage from "../assets/Viaticos.jpg";
 
 const projects = [
   {
