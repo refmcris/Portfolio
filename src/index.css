@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark text-text-primary min-h-screen;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer utilities {
+  .animate-slide {
+    animation: slide 25s linear infinite;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
