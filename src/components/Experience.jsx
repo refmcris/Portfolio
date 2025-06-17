@@ -8,7 +8,7 @@ const Experience = () => {
       company: "Freelance",
       period: "2024 - Present",
       description:
-        "Development of web and mobile applications using React, Node.js, React Native, and AWS. Implementation of serverless architectures and performance optimization.",
+        "Design and development of scalable, high-performance web applications using React for the frontend and Django and C#.NET for the backend, ensuring efficient integration and a smooth, optimized user experience.",
       type: "work"
     },
     {
@@ -16,7 +16,7 @@ const Experience = () => {
       company: "Lean Solutions Group",
       period: "2025 - Present",
       description:
-        "Web application development using React, TypeScript, and Node.js. Collaboration in implementing new features and performance improvements.",
+        "Web application development using React, TypeScript, and C# with .NET. Collaboration in implementing new features and performance improvements.",
       type: "work"
     }
   ];
