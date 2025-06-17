@@ -59,7 +59,7 @@ export const Home = () => {
           <p className="text-text-secondary text-lg md:text-xl leading-relaxed">
             Developer Full Stack specialized in creating exceptional web
             experiences. Passionate about{" "}
-            <ShinyText text="Clean Code" className="text-cyan-400" speed={4} />{" "}
+            <ShinyText text="Clean Code" className="text-cyan-600" speed={4} />{" "}
             and innovation.
           </p>
           <div className="flex space-x-4">
