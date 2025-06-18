@@ -26,7 +26,7 @@ export default {
         },
         text: {
           primary: "#e5e7eb",
-          secondary: "#d0e3ff",
+          secondary: "#d3d3d3",
           dark: "#1e293b"
         }
       },
