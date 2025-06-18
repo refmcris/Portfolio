@@ -8,7 +8,8 @@ import {
   FaCss3,
   FaPython,
   FaJava,
-  FaDatabase
+  FaDatabase,
+  FaEnvelope
 } from "react-icons/fa";
 
 import { useTechSlider } from "../hooks/useTechSlider";
@@ -62,6 +63,14 @@ export const Home = () => {
               className="hover:text-accent transition-colors"
             >
               <FaLinkedin className="w-6 h-6 hover:scale-105 hover:shadow-xl transition-all duration-300" />
+            </a>
+            <a
+              href="https://mail.google.com/mail/u/0/?fs=1&to=cristianmartineztez@gmail.com&su=Portfolio Cristian&tf=cm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              <FaEnvelope className="w-6 h-6 hover:scale-105 hover:shadow-xl transition-all duration-300" />
             </a>
           </div>
         </div>
