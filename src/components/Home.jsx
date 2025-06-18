@@ -79,7 +79,7 @@ export const Home = () => {
           <LetterGlitch
             glitchSpeed={50}
             centerVignette={true}
-            outerVignette={false}
+            outerVignette={true}
             smooth={true}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent z-10" />
