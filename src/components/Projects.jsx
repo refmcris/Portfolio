@@ -15,20 +15,11 @@ const projects = [
   {
     title: "Viaticos App",
     description:
-      "Aplicación de gestión de viaticos con características de colaboración en tiempo real.",
+      "Expense management application with real-time collaboration features.",
     image: viaticosImage,
-    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
+    technologies: ["Java", ".Net", "SQLite"],
     link: "https://github.com/yourusername/taskapp",
     demo: "https://taskapp-demo.com"
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "Sitio web de portfolio personal con diseño moderno y animaciones suaves.",
-    image: "/projects/portfolio.jpg",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "https://github.com/yourusername/portfolio",
-    demo: "https://portfolio-demo.com"
   }
 ];
 
@@ -53,7 +44,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -65,7 +56,7 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="bg-dark-accent rounded-xl overflow-hidden">
+              <div className="bg-dark-accent/80 rounded-xl overflow-hidden max-w-mm w-full">
                 <div className="relative aspect-video">
                   <img
                     src={project.image}
@@ -112,7 +103,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-dark-secondary rounded-full text-sm text-text-secondary"
+                        className="px-3 py-1 bg-white rounded-full text-sm text-black"
                       >
                         {tech}
                       </span>

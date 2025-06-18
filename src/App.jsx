@@ -6,6 +6,7 @@ import { Home } from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
+import WhatIDo from "./components/WhatIDo";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -25,8 +26,9 @@ function App() {
       <main className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Home />
+          <WhatIDo />
           <Experience />
-          {/* <Projects /> */}
+          <Projects />
         </div>
       </main>
 
