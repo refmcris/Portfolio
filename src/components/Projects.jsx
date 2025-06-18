@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Inventory Management System",
     description:
-      "Inventory management system with product registration, update and deletion features.",
+      "Inventory management system for Univalle with product registration, loans, update and deletion features.",
     image: uninventoryImage,
     technologies: ["React", "C#", "MySQL", ".NET"],
     link: "https://github.com/refmcris/uninventory.app"
@@ -18,8 +18,7 @@ const projects = [
       "Expense management application with real-time collaboration features.",
     image: viaticosImage,
     technologies: ["Java", ".Net", "SQLite"],
-    link: "https://github.com/yourusername/taskapp",
-    demo: "https://taskapp-demo.com"
+    link: "https://github.com/refmcris/Viaticos-app"
   }
 ];
 
@@ -78,14 +77,6 @@ const Projects = () => {
                           {project.description}
                         </p>
                         <div className="flex justify-center space-x-4">
-                          <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-4 py-2 bg-accent text-white rounded-full hover:bg-dark-accent transition-colors"
-                          >
-                            Demo
-                          </a>
                           <a
                             href={project.link}
                             target="_blank"

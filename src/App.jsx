@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import WhatIDo from "./components/WhatIDo";
 import Squares from "./blocks/Backgrounds/Squares/Squares";
-import Contact from "./components/Contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -32,7 +31,6 @@ function App() {
             <WhatIDo />
             <Experience />
             <Projects />
-            <Contact />
           </div>
         </main>
 
