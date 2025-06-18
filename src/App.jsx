@@ -4,9 +4,9 @@ import { Header } from "./components/Header";
 import Footer from "./components/Footer";
 import { Home } from "./components/Home";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import WhatIDo from "./components/WhatIDo";
+import Squares from "./blocks/Backgrounds/Squares/Squares";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,19 +20,22 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen ${darkMode ? "bg-dark" : "bg-light"}`}>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className={`min-h-screen relative`}>
+      <Squares />
+      <div className="relative z-10">
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <main className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Home />
-          <WhatIDo />
-          <Experience />
-          <Projects />
-        </div>
-      </main>
+        <main className="relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Home />
+            <WhatIDo />
+            <Experience />
+            <Projects />
+          </div>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
