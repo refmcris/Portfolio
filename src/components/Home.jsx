@@ -11,41 +11,12 @@ import {
   FaDatabase
 } from "react-icons/fa";
 
-import { DiPostgresql, DiMysql, DiMsqlServer } from "react-icons/di";
-
-import {
-  SiTailwindcss,
-  SiJavascript,
-  SiTypescript,
-  SiNextdotjs,
-  SiDotnet,
-  SiSpringboot
-} from "react-icons/si";
 import { useTechSlider } from "../hooks/useTechSlider";
 import SplitText from "../blocks/TextAnimations/SplitText/SplitText";
 import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText";
 import LetterGlitch from "../blocks/Backgrounds/LetterGlitch/LetterGlitch";
 
 export const Home = () => {
-  const technologies = [
-    { icon: <FaReact />, name: "React", color: "#61DAFB" },
-    { icon: <SiTailwindcss />, name: "Tailwind", color: "#38BDF8" },
-    { icon: <SiJavascript />, name: "JavaScript", color: "#F7DF1E" },
-    { icon: <SiTypescript />, name: "TypeScript", color: "#3178C6" },
-    { icon: <FaNodeJs />, name: "Node.js", color: "#3C873A" },
-    { icon: <SiNextdotjs />, name: "Next.js", color: "#000000" },
-    { icon: <FaHtml5 />, name: "HTML", color: "#E34F26" },
-    { icon: <FaCss3 />, name: "CSS", color: "#1572B6" },
-    { icon: <FaPython />, name: "Python", color: "#3776AB" },
-    { icon: <FaJava />, name: "Java", color: "#007396" },
-    { icon: <DiMysql />, name: "MySQL", color: "#4479A1" },
-    { icon: <SiDotnet />, name: ".NET", color: "#512BD4" },
-    { icon: <SiSpringboot />, name: "SpringBoot", color: "#6DB33F" },
-    { icon: <DiMsqlServer />, name: "SQL Server", color: "#CC2927" },
-    { icon: <DiPostgresql />, name: "PostgreSQL", color: "#336791" }
-  ];
-  const { sliderRef } = useTechSlider(technologies);
-
   return (
     <section id="home" className="py-20 md:py-16 bg-black">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
