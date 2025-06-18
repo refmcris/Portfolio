@@ -38,7 +38,9 @@ export const Home = () => {
           </p>
           <div className="flex space-x-4">
             <a
-              href="#contact"
+              href="https://www.linkedin.com/in/cristian-martinez-40a203270"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 border border-dark-accent text-white bg-dark-accent  rounded-lg transition-colors font-semibold"
             >
               Contact Me
