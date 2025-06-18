@@ -6,7 +6,9 @@ import {
   FaCss3,
   FaPython,
   FaJava,
-  FaDatabase
+  FaDatabase,
+  FaCode,
+  FaServer
 } from "react-icons/fa";
 import { DiPostgresql, DiMysql, DiMsqlServer } from "react-icons/di";
 import {
@@ -22,6 +24,7 @@ import { useTechSlider } from "../hooks/useTechSlider";
 const sections = [
   {
     title: "Web Development",
+    icon: <FaCode className="text-accent" />,
     content: (
       <p>
         I build responsive and interactive web applications using modern
@@ -32,6 +35,7 @@ const sections = [
   },
   {
     title: "Backend Development",
+    icon: <FaServer className="text-accent" />,
     content: (
       <p>
         I design and implement scalable backend systems with Node.js,
@@ -68,41 +72,41 @@ const WhatIDo = () => {
   };
 
   return (
-    <section className="my-12">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#dfdfdf] mb-8 text-center">
-          What I Do
-        </h2>
-        <div className="space-y-4">
-          {sections.map((section, idx) => (
-            <div
-              key={idx}
-              className="border border-dark-accent rounded-lg shadow-md bg-dark-accent/30"
+    <section className="max-w-3xl mx-auto my-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#dfdfdf] mb-8 text-center">
+        What I Do
+      </h2>
+      <div className="space-y-4">
+        {sections.map((section, idx) => (
+          <div
+            key={idx}
+            className="border border-dark-accent rounded-lg shadow-md bg-dark-accent/30"
+          >
+            <button
+              className="w-full text-left px-6 py-4 font-semibold text-lg flex justify-between items-center focus:outline-none text-[#dfdfdf]"
+              onClick={() => toggle(idx)}
             >
-              <button
-                className="w-full text-left px-6 py-4 font-semibold text-lg flex justify-between items-center focus:outline-none text-[#dfdfdf]"
-                onClick={() => toggle(idx)}
-              >
-                {section.title}
-                <span className="ml-2 text-xl">
-                  {openIndex === idx ? "-" : "+"}
-                </span>
-              </button>
-              {openIndex === idx && (
-                <div className="px-6 pb-4 text-text-secondary animate-fade-in">
-                  {section.content}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+              <span className="flex items-center space-x-3">
+                {section.icon} <span>{section.title}</span>
+              </span>
+              <span className="ml-2 text-xl">
+                {openIndex === idx ? "-" : "+"}
+              </span>
+            </button>
+            {openIndex === idx && (
+              <div className="px-6 pb-4 text-text-secondary animate-fade-in">
+                {section.content}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="w-full mt-10 px-4 sm:px-6 lg:px-8">
+      <div className="w-full mt-10">
         <div
-          className="relative w-full p-4 rounded-2xl backdrop-blur-none"
-          style={{ opacity: 0.69 }}
+          className="relative w-full p-4  rounded-2xl shadow-lg backdrop-blur-md"
+          style={{ opacity: 0.77 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent z-10 pointer-events-none rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10 pointer-events-none rounded-2xl" />
           <div className="relative overflow-hidden w-full">
             <div className="flex" ref={sliderRef}>
               {technologies.concat(technologies).map((tech, index) => (
