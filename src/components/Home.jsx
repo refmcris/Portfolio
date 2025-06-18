@@ -27,7 +27,7 @@ export const Home = () => {
               <SplitText text="Cristian Martinez" />
             </span>
           </h1>
-          <p className="text-[#adadad] text-lg md:text-xl leading-relaxed">
+          <p className="text-[#dfdfdf] text-lg md:text-xl leading-relaxed">
             Developer Full Stack specialized in creating exceptional web
             experiences. Passionate about{" "}
             <ShinyText text="Clean Code" className="text-cyan-600" speed={4} />{" "}
@@ -41,7 +41,7 @@ export const Home = () => {
               Contact Me
             </a>
           </div>
-          <div className="flex space-x-4 text-[#adadad]">
+          <div className="flex space-x-4 text-[#dfdfdf]">
             <a
               href="https://github.com/refmcris"
               target="_blank"
