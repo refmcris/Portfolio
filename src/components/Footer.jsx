@@ -4,7 +4,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="py-12 mt-20 bg-black/80 backdrop-blur-md rounded-t-2xl shadow-2xl">
+    <footer className="py-12 mt-20 mx-auto max-w-7xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="space-y-4">

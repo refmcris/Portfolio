@@ -21,7 +21,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 ">
+    <section
+      id="contact"
+      className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,15 +48,15 @@ const Contact = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             <div className="space-y-6">
-              <div className="bg-gray-800 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold mb-4">
+              <div className="rounded-xl p-6 shadow-md border border-dark-accent/60">
+                <h3 className="text-2xl font-semibold mb-4 text-white">
                   Contact Information
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-blue-500"
+                      className="h-6 w-6 text-accent"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -67,7 +70,7 @@ const Contact = () => {
                     </svg>
                     <a
                       href="mailto:cristian.tez@correounivalle.edu.co"
-                      className="text-gray-300 hover:text-blue-500 transition-colors"
+                      className="text-text-secondary hover:text-accent transition-colors"
                     >
                       cristian.tez@correounivalle.edu.co
                     </a>
@@ -75,7 +78,7 @@ const Contact = () => {
                   <div className="flex items-center space-x-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-blue-500"
+                      className="h-6 w-6 text-accent"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -93,18 +96,20 @@ const Contact = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <span className="text-gray-300">Colombia</span>
+                    <span className="text-text-secondary">Colombia</span>
                   </div>
                 </div>
 
                 <div className="mt-8">
-                  <h4 className="text-lg font-semibold mb-4">Follow me on</h4>
+                  <h4 className="text-lg font-semibold mb-4 text-white">
+                    Follow me on
+                  </h4>
                   <div className="flex space-x-4">
                     <a
                       href="https://github.com/refmcris"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-500 transition-colors"
+                      className="text-text-secondary hover:text-accent transition-colors"
                     >
                       <svg
                         className="h-6 w-6"
@@ -118,7 +123,7 @@ const Contact = () => {
                       href="https://www.linkedin.com/in/cristian-martinez-40a203270"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-500 transition-colors"
+                      className="text-text-secondary hover:text-accent transition-colors"
                     >
                       <svg
                         className="h-6 w-6"
@@ -135,13 +140,13 @@ const Contact = () => {
 
             <form
               onSubmit={handleSubmit}
-              className="bg-gray-800 rounded-xl p-6"
+              className="rounded-xl p-6 shadow-md border border-dark-accent/60"
             >
               <div className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-text-secondary mb-2"
                   >
                     Name
                   </label>
@@ -151,14 +156,14 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                    className="w-full px-4 py-2 bg-dark-secondary border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary"
                     required
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-text-secondary mb-2"
                   >
                     Email
                   </label>
@@ -168,14 +173,14 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                    className="w-full px-4 py-2 bg-dark-secondary border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary"
                     required
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-400 mb-2"
+                    className="block text-sm font-medium text-text-secondary mb-2"
                   >
                     Message
                   </label>
@@ -186,13 +191,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                    className="w-full px-4 py-2 bg-dark-secondary border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="w-full bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark-accent"
                   onClick={() => alert("Soon")}
                 >
                   Send Message

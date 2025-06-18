@@ -11,7 +11,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md shadow-2xl rounded-b-2xl px-4 py-2 transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-light/80 dark:bg-black/80 backdrop-blur-md shadow-2xl rounded-b-2xl px-4 py-2 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-end h-16">
           <div className="hidden md:block">
@@ -20,14 +20,14 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`text-[#dfdfdf] hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors`}
+                  className="text-text-primary dark:text-text-light hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors"
                 >
                   {item.name}
                 </a>
               ))}
               <button
-                onClick={() => alert("Soon")}
-                className="p-2 rounded-lg bg-dark-accent text-white hover:bg-accent transition-colors"
+                onClick={() => setDarkMode(!darkMode)}
+                className="p-2 rounded-lg bg-light-accent dark:bg-dark-accent text-text-primary dark:text-text-light hover:bg-accent transition-colors"
               >
                 {darkMode ? (
                   <FaSun className="w-5 h-5" />
@@ -40,8 +40,8 @@ export const Header = ({ darkMode, setDarkMode }) => {
 
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => alert("Soon")}
-              className="p-2 rounded-lg bg-dark-accent text-white hover:bg-accent transition-colors mr-2"
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg bg-light-accent dark:bg-dark-accent text-text-primary dark:text-text-light hover:bg-accent transition-colors mr-2"
             >
               {darkMode ? (
                 <FaSun className="w-5 h-5" />
@@ -51,7 +51,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-text-primary hover:text-accent p-2 rounded-md"
+              className="text-text-primary dark:text-text-light hover:text-accent p-2 rounded-md"
             >
               {isMenuOpen ? (
                 <FaTimes className="h-6 w-6" />

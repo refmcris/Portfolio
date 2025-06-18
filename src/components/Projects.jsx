@@ -27,7 +27,10 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section id="projects" className="py-20 bg-black">
+    <section
+      id="projects"
+      className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +59,7 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="shadow-md bg-dark-accent/30 rounded-xl border border-dark-accent/60 overflow-hidden max-w-mm w-full">
+              <div className="shadow-md rounded-xl border border-dark-accent/60 overflow-hidden max-w-mm w-full">
                 <div className="relative aspect-video">
                   <img
                     src={project.image}
@@ -97,14 +100,14 @@ const Projects = () => {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-[#dfdfdf]">
+                  <h3 className="text-xl font-semibold mb-2 text-text-white dark:text-[#dfdfdf]">
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-[#393939] rounded-full text-sm text-[#ebebeb]"
+                        className="px-3 py-1 rounded-full text-sm text-text-secondary border border-dark-accent/60"
                       >
                         {tech}
                       </span>

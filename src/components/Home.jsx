@@ -18,8 +18,11 @@ import LetterGlitch from "../blocks/Backgrounds/LetterGlitch/LetterGlitch";
 
 export const Home = () => {
   return (
-    <section id="home" className="py-20 md:py-16 bg-black">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section
+      id="home"
+      className="py-20 md:py-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="space-y-8 p-10">
           <h1 className="text-3xl md:text-5xl font-bold ">
             <span className="block text-text-secondary mb-2">Hi, I'm</span>
@@ -27,7 +30,7 @@ export const Home = () => {
               <SplitText text="Cristian Martinez" />
             </span>
           </h1>
-          <p className="text-[#dfdfdf] text-lg md:text-xl leading-relaxed">
+          <p className="text-text-primary dark:text-text-light text-lg md:text-xl leading-relaxed">
             Developer Full Stack specialized in creating exceptional web
             experiences. Passionate about{" "}
             <ShinyText text="Clean Code" className="text-cyan-600" speed={4} />{" "}
@@ -36,7 +39,7 @@ export const Home = () => {
           <div className="flex space-x-4">
             <a
               href="#contact"
-              className="px-8 py-3 bg-gradient-to-r from-black via-dark-accent to-dark-accent text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300   focus:ring-2 focus:ring-accent"
+              className="px-8 py-3 border border-dark-accent text-white bg-dark-accent  rounded-lg transition-colors font-semibold"
             >
               Contact Me
             </a>
@@ -68,7 +71,7 @@ export const Home = () => {
             outerVignette={false}
             smooth={true}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-dark z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent z-10" />
         </div>
       </div>
     </section>
