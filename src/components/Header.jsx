@@ -7,8 +7,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Projects", href: "#projects" }
   ];
 
   return (
@@ -21,7 +20,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`text-text-secondary hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors`}
+                  className={`text-[#adadad] hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors`}
                 >
                   {item.name}
                 </a>

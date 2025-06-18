@@ -36,7 +36,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-white">
+          <h2 className="text-4xl font-bold mb-4 text-[#adadad]">
             Featured Projects
           </h2>
           <p className="text-xl text-text-secondary">
@@ -56,11 +56,12 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="bg-dark-accent/80 rounded-xl overflow-hidden max-w-mm w-full">
+              <div className="shadow-md bg-dark-accent/30 rounded-xl border border-dark-accent/60 overflow-hidden max-w-mm w-full">
                 <div className="relative aspect-video">
                   <img
                     src={project.image}
                     alt={project.title}
+                    opacity={0.5}
                     className="w-full h-full object-cover"
                   />
                   {hoveredIndex === index && (
@@ -96,14 +97,14 @@ const Projects = () => {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white">
+                  <h3 className="text-xl font-semibold mb-2 text-[#adadad]">
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-white rounded-full text-sm text-black"
+                        className="px-3 py-1 bg-[#393939] rounded-full text-sm text-[#ebebeb]"
                       >
                         {tech}
                       </span>
