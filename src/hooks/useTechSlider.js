@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 export function useTechSlider(technologies) {
   const sliderRef = useRef(null);
-  const speed = 0.5;
+  const speed = 1.5;
 
   useEffect(() => {
     const slider = sliderRef.current;
