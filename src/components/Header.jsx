@@ -20,7 +20,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`text-[#adadad] hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors`}
+                  className={`text-[#dfdfdf] hover:text-accent px-3 py-2 rounded-md text-lg font-medium transition-colors`}
                 >
                   {item.name}
                 </a>

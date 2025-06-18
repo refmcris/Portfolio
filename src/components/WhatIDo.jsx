@@ -69,7 +69,7 @@ const WhatIDo = () => {
 
   return (
     <section className="max-w-3xl mx-auto my-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#adadad] mb-8 text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#dfdfdf] mb-8 text-center">
         What I Do
       </h2>
       <div className="space-y-4">
@@ -79,7 +79,7 @@ const WhatIDo = () => {
             className="border border-dark-accent rounded-lg shadow-md bg-dark-accent/30"
           >
             <button
-              className="w-full text-left px-6 py-4 font-semibold text-lg flex justify-between items-center focus:outline-none text-[#adadad]"
+              className="w-full text-left px-6 py-4 font-semibold text-lg flex justify-between items-center focus:outline-none text-[#dfdfdf]"
               onClick={() => toggle(idx)}
             >
               {section.title}

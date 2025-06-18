@@ -32,7 +32,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#adadad] mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#dfdfdf] mb-12">
           Experience
         </h2>
 
@@ -48,9 +48,9 @@ const Experience = () => {
               >
                 <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-dark-accent flex items-center justify-center">
                   {exp.type === "work" ? (
-                    <FaBriefcase className="text-[#adadad]" />
+                    <FaBriefcase className="text-[#dfdfdf]" />
                   ) : (
-                    <FaGraduationCap className="text-[#adadad]" />
+                    <FaGraduationCap className="text-[#dfdfdf]" />
                   )}
                 </div>
 
@@ -60,7 +60,7 @@ const Experience = () => {
                   }`}
                 >
                   <div className="shadow-md bg-dark-accent/30 p-6 rounded-xl shadow-lg border border-dark-accent/60">
-                    <h3 className="text-xl font-semibold text-[#adadad] mb-1">
+                    <h3 className="text-xl font-semibold text-[#dfdfdf] mb-1">
                       {exp.title}
                     </h3>
                     <p className="text-text-secondary mb-2">

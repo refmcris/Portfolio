@@ -36,7 +36,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#adadad]">
+          <h2 className="text-4xl font-bold mb-4 text-[#dfdfdf]">
             Featured Projects
           </h2>
           <p className="text-xl text-text-secondary">
@@ -97,7 +97,7 @@ const Projects = () => {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-[#adadad]">
+                  <h3 className="text-xl font-semibold mb-2 text-[#dfdfdf]">
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-2">
