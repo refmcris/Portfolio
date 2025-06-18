@@ -6,7 +6,7 @@ import { useRef, useEffect } from "react";
 
 const Squares = ({
   direction = "diagonal",
-  speed = 1,
+  speed = 0.5,
   borderColor = "#232a3b",
   squareSize = 40,
   hoverFillColor = "#151a2b"

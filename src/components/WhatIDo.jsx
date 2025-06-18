@@ -100,7 +100,7 @@ const WhatIDo = () => {
       <div className="w-full mt-10 px-4 sm:px-6 lg:px-8">
         <div
           className="relative w-full p-4 rounded-2xl backdrop-blur-none"
-          style={{ opacity: 0.73 }}
+          style={{ opacity: 0.69 }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent z-10 pointer-events-none rounded-2xl" />
           <div className="relative overflow-hidden w-full">
