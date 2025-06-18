@@ -26,7 +26,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 </a>
               ))}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => alert("soon")}
                 className="p-2 rounded-lg bg-light-accent dark:bg-dark-accent text-text-primary dark:text-text-light hover:bg-accent transition-colors"
               >
                 {darkMode ? (
