@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import toast, { Toaster } from "react-hot-toast";
@@ -8,14 +8,17 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     await handleSubmit(event);
+
+    event.target.reset();
+  };
+
+  useEffect(() => {
     if (state.succeeded) {
       toast.success("¡Mensaje enviado con éxito!");
-      event.target.reset();
     } else if (state.errors) {
       toast.error("Hubo un error al enviar el mensaje.");
     }
-  };
-
+  }, [state.succeeded, state.errors]);
   return (
     <section
       id="contact"
