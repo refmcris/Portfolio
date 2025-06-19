@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+  const [state, handleSubmit] = useForm("xrbkabgv");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const onSubmit = async (event) => {
+    await handleSubmit(event);
+    if (state.succeeded) {
+      toast.success("¡Mensaje enviado con éxito!");
+      event.target.reset();
+    } else if (state.errors) {
+      toast.error("Hubo un error al enviar el mensaje.");
+    }
   };
 
   return (
@@ -25,6 +21,7 @@ const Contact = () => {
       id="contact"
       className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
     >
+      <Toaster />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,7 +100,7 @@ const Contact = () => {
             </div>
 
             <form
-              onSubmit={handleSubmit}
+              onSubmit={onSubmit}
               className="rounded-xl p-6 shadow-md border border-dark-accent/60"
             >
               <div className="space-y-6">
@@ -118,8 +115,6 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary bg-transparent"
                     required
                   />
@@ -135,8 +130,6 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary bg-transparent"
                     required
                   />
@@ -152,8 +145,6 @@ const Contact = () => {
                     id="message"
                     name="message"
                     placeholder="Write your message here..."
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-2 border border-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-text-primary bg-transparent"
                     required
@@ -162,7 +153,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="w-full bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark-accent"
-                  onClick={() => alert("Soon")}
+                  disabled={state.submitting}
                 >
                   Send Message
                 </button>
