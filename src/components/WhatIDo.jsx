@@ -103,10 +103,10 @@ const WhatIDo = () => {
       </div>
       <div className="w-full mt-10">
         <div
-          className="relative w-full p-4  rounded-2xl shadow-lg backdrop-blur-md"
+          className="relative w-full p-4  rounded-2xl shadow-lg backdrop-blur-none"
           style={{ opacity: 0.77 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10 pointer-events-none rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent z-10 pointer-events-none rounded-2xl" />
           <div className="relative overflow-hidden w-full">
             <div className="flex" ref={sliderRef}>
               {technologies.concat(technologies).map((tech, index) => (
